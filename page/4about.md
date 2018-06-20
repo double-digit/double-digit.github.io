@@ -11,7 +11,7 @@ type: page
 
 ## 关于我
 
-<iframe src="http://www.158pic.com/Picture/Figure/116842.htm" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+
 ![image](https://github.com/double-digit/double-digit.github.io/raw/master/1.jpg)
 
 就读于深圳信息职业技术学院，是一名大一学生，专业是通信技术。
