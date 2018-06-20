@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JavaScript 语言精粹笔记2-继承、数组、正则表达式"
+title:  "七号房的礼物"
 categories: JavaScript
 tags:  继承 对象 原型 Array 正则
 ---
@@ -8,212 +8,30 @@ tags:  继承 对象 原型 Array 正则
 * content
 {:toc}
 
-记录一下阅读蝴蝶书的笔记，本篇为书中以下章节的笔记：继承、数组和正则表达式。
+《7号房的礼物》是一部由李焕庆执导，柳承龙、郑进永、朴信惠等主演的喜剧类型的电影，于2013年1月23日在韩国上映。
 
+该片主要讲述了在患有精神迟滞症状的父亲受到莫名犯罪指控之后，其女儿在法庭上为其做无罪辩护的故事。
 
+2013年，该片获第34届韩国电影青龙奖-最卖座韩国电影奖。
 
 
-## 继承
 
-继承的两大好处：代码重用，引入一套类型系统的规范。
 
-### 伪类
+教导所7号房云集着罪大恶极的凶犯们。这天，这里迎来了一个奇怪的新人--智商只有6岁孩童水平的中年汉龙九。虽然智障，但龙九有一个可爱的女儿艺胜，而他亦是个全心全意爱着女儿的好父亲。目前，对于7号房的囚徒们一项最紧要的任务是，如何把龙九的女儿艺胜带进外部人禁入的教导所……[1]
+智商只有6岁的龙九（柳承龙饰）含冤入狱最多凶犯的第七号监狱，超级溺爱7岁女儿艺胜（童年：葛素媛饰，成人：朴信惠饰）的龙九和女儿的亲情感动了同一房间的重犯，大家一起联手帮助小女儿进入监狱。
 
-JavaScript 通过构造器函数产生对象。
+虽然父亲龙九的智商停留在6岁，但是看着女儿露出的幸福微笑，和其他正常的父亲一样，让人感受到浓浓的父爱。
 
-构造器调用模式，即用`new`前缀去调用一个函数。
+一次，他在路上见到了一个孩子，这个孩子背着他女儿最喜欢的包，她告诉龙九别的地方也有,于是李龙九便跟着她去。谁知这个孩子因为路面冰冻湿滑而发生事故死去。李龙九想救孩子，对其进行了胸外心脏按压等施救措施，但正是因为这一举动，他被误认为是罪犯并被抓捕。
 
-```js
-var Mammal = function(name) {
-    this.name = name
-}
+尽管案情疑点颇多，可是因去世孩子的父亲是警察局局长，失去孩子的愤怒让他威胁李龙九认下罪名，否则便让艺胜承受一样的痛苦。龙九为了保护女儿艺胜选择抗下莫须有的罪名，最终被执行死刑。
+各位实力派演员们通过各式各色的‘演技和声’将一个奇迹般的故事变为了现实"——CNIE21杂志[8] 
 
-Mammal.prototype.getName = function() {
-    return this.name
-}
 
-Mammal.prototype.says = function() {
-    return this.saying || ''
-};
+影片套用的是《我是山姆》那样的人物关系，而在情节上则更有戏剧性。冤案加亲情的双重催泪保障。监狱里的温情更感人是因为，相比善人做好事，人们更喜欢浪子回头，恶人行善的故事。虽然我们怎么吐槽韩式催泪片的套路，但是真的很有效，也确实很感人。
 
-var myMammal = new Mammal('Herb')
-console.log(myMammal.getName()) //Herb
-```
+韩国电影工业化的高度和成熟，在标准化的工业流程之外，还有一部相当韩范儿的犯罪主体。片子没什么煽情的，导演似乎在这方面很克制，就是憋着为了最后的情感爆发，美式的残障励志遇到韩式的残酷法制犯罪，再完美可惜也终究还都是套路牌。
 
-书中不推荐这样的写法。有很多风险。若忘记添加`new`前缀，`this`无法绑定到新的对象上。而是绑定到了全局对象上，破坏了全局变量环境。
+这是电影海报史上数得着的糟糕设计。
 
-### 对象说明符
-
-上一节中的构造器可能要接受一大串参数。我们可以这样写：
-
-```js
-var myObject = Maker({
-    first: f,
-    middle: m,
-    last: l,
-    state: s,
-    city: c
-})
-```
-
-将JSON对象传递给构造器，而它返回一个构造完全的对象。
-
-### 原型
-
-在一个纯粹的原型模式中，我们将摒弃类，转而专注于对象。一个新对象可以继承一个就对象的属性。
-
-```js
-var myMammal = {
-    name: 'MM',
-    getName: function() {
-        return this.name
-    },
-    says: function() {
-        return this.saying || ''
-    }
-}
-
-var myCat = Object.create(myMammal)
-myCat.name = 'Kitty'
-myCat.saying = 'meow'
-myCat.run = function() {
-    return 'Kitty is running'
-}
-myCat.getName = function() {
-    return this.says + ' ' + this.name + ' ' + this.says
-}
-```
-
-这是一种差异化继承。
-
-### 函数化
-
-前文看到的继承模式没法保护隐私。对象的所有属性都是可见的。无法得到私有变量和私有函数。为了解决这一问题，我们有模块模式。
-
-构造一个生成对象的函数需要4步骤：
-
-1. 创建一个新对象。
-2. 有选择的定义私有变量和方法。
-3. 给这个新对象扩充方法。
-4. 返回那个新对象。
-
-```js
-var mammal = function(spec) {
-    var that = {}
-
-    that.getName = function() {
-        return spec.name
-    }
-    that.says = function() {
-        return spec.saying || ''
-    }
-
-    return that
-}
-
-var myMammal = mammal({
-    name: 'Herb',
-    saying: 'Cheers!'
-})
-
-console.log(myMammal.getName()) //Herb
-console.log(myMammal.says()) //Cheers!
-```
-
-也可以参考上一篇文章，[JavaScript 语言精粹笔记1-语法、对象、函数 之模块部分](http://gaohaoyang.github.io/2016/06/07/JavaScript-good-parts-note1/#section-34)。
-
-### 部件
-
-这一部分看的不是特别懂，我想等我学完ES2015中的类和模块部分后再看看吧。
-
-## 数组
-
-### 数组字面量
-
-一个数组字面量是在一对方括号中包围零个或多个用逗号分隔的值的表达式。
-
-再大多数语言中，一个数组的多有元素都要求是相同的类型。JavaScript 允许数组包含任意混合类型的值。
-
-### 长度
-
-JavaScript 数组的`length`属性是没有上界的。如果用大于或等于当前`length`的数字作为下标来存储一个元素，那么`length`值会被增大以容纳新元素，不会发生数组越界错误。
-
-### 删除
-
-数组也是对象，可以用`delete`来删除元素
-
-```js
-var numbers = ['one', 'two', 3, 'four', 'wu']
-
-delete numbers[0]
-console.log(numbers[0]) //undefined
-console.log(numbers.length) //5
-```
-
-可以使用`splice`方法，进行删除和修改操作。
-
-```js
-numbers.splice(0, 1)
-console.log(numbers[0]) //two
-console.log(numbers.length) //4
-```
-
-### 枚举
-
-使用常规`for`循环即可，可以保证数组的顺序。
-
-### 容易混淆的地方
-
-当属性名是小而连续的整数时，应该使用数组，否则使用对象。
-
-```js
-console.log(typeof [1, 2]) //object
-```
-
-返回数组的类型是`object`，没有任何意义。
-
-判断数组类型的方法
-
-```js
-console.log(Array.isArray(numbers)) //true
-```
-ECMAScript 5.1 (ECMA-262) 和 ECMAScript 2015 (6th Edition, ECMA-262) 标准中的方法。
-
-或者下面这个方法。
-```js
-var is_array = function(value) {
-    return Object.prototype.toString.apply(value) === '[object Array]'
-}
-console.log(is_array(numbers)) //true
-```
-
-### 方法
-
-数组的方法被存储在`Array.prototype`中的函数。
-
-数组是对象，因此`Array.prototype`也是可扩充的。
-
-### 指定初始值
-
-JavaScript 的数组不会预制值。
-
-JavaScript 没有多维数组，单项大多数类 C 语言一样，支持元素为数组的数组。
-
-```js
-var matrix = [
-    [7, 8, 9],
-    [4, 5, 6],
-    [1, 2, 3]
-]
-console.log(matrix[1][2]) //6
-```
-
-## 正则表达式
-
-关于正则表达式，以前的博文写的比较多了，详情见：
-
-[百度Web前端技术学院(2)-JavaScript 基础 之正则表达式部分1](http://gaohaoyang.github.io/2015/04/22/baidu-ife-2-javascript/#section-10)
-
-[百度Web前端技术学院(2)-JavaScript 基础 之正则表达式部分2](http://gaohaoyang.github.io/2015/04/22/baidu-ife-2-javascript/#section-12)
-
-[浅谈正则表达式中的分组和引用](http://gaohaoyang.github.io/2016/05/06/regular-expression-group/)
+这部电影看上去的第一印象绝对是一出低俗闹剧，你会忍不住来回再翻翻有什么其他的新电影，但可怜啊，只有它，于是不得不切克闹一下。然后，你会一边笑，一边不争气地开始哭，甚至会喘不过气来，就像马上快窒息死掉一样。
