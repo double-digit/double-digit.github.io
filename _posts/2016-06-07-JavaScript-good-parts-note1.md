@@ -2,7 +2,7 @@
 layout: post
 title:  "熔炉"
 categories: JavaScript
-tags:  对象 函数 this 闭包 面向对象 作用域
+
 ---
 
 * content
