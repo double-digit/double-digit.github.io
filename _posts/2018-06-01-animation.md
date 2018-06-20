@@ -16,127 +16,38 @@ author: Ylj
 
 
 
-> 关于 poplayer 是什么，详见 [POPLAYER起来HIGH~~](https://github.com/amfe/article/issues/18)
+1剧情介绍编辑
+侏罗纪世界
+侏罗纪世界(5)
+《侏罗纪世界》的背景设置在《侏罗纪公园》故事发生22年后，纳布拉尔岛已经发展成为一个庞大的主题公园和度假胜地——侏罗纪世界。游客可以乘着船、驾着车，或者坐在透明的旋转球里欣赏身边的恐龙，优美的景色和宁静的气氛令人们流连忘返，如同公园曾经的创始人约翰·哈蒙德（理查德·阿滕伯勒饰）所期望的那样。但是这一派热闹之中似乎暗藏危机，如今的国际基因科技公司（InGen）在制造恐龙的同时还力图打造“混血儿”，将不同种类甚至不同物种的DNA相结合，最终意外制造出可怕的D-Rex掠食者恐龙。以欧文（克里斯·帕拉特饰）为首的研究小组来到这里研究迅猛龙，却接连发生意外。[1]
 
-简单的说下需求，这个弹层希望可以像 native 在商品详情页的弹层一样，从下向上滑出，点击遮罩或按钮时关闭。为了给用户带来更好的体验，我在这个基础上又增加了一些手势和过渡的动画效果，如下图。下面简单的拆分一下动画细节：
+2影片看点编辑
+看点一：视觉骇人-暴虐霸王龙“血洗”公园
 
-- 页面载入，卡片向上滑入
-- 增加 pan 的手势，卡片跟随手指滑动
-- 随着手指滑动，增加遮罩透明度与卡片阴影变化
-- 增加向上和向下的边界条件的处理
+《侏罗纪世界》剧情源于第一部《侏罗纪公园》的故事之后22年。为了吸引更多的游客，“侏罗纪世界”主题公园研发出了一种更大更凶残的混合基因的新型恐龙——暴虐霸王龙。意外的是，具有超高智商的暴虐霸王龙挣脱了人类的控制，让公园近2万名游客及工作人员陷入了灭顶之灾。“驯龙师”克里斯-帕拉特将和公园主管布莱斯-达拉斯-霍华德等人联手，与暴虐霸王龙展开生死对抗。
 
-## 动画与手势的运用
+作为影片的大BOSS，暴虐霸王龙有着不同于其他恐龙的特质——它结合了多种恐龙和其它生物的DNA，拥有更庞大的体积和更高超的智商，。导演科林-特莱沃若表示，之前的霸王龙、翼龙等都足够凶猛，“但人类总
 
-这些动画利用 CSS 3 的一些属性再加上手势操作即可完成，这里手势操作我选择了老牌的 [HammerJS](https://hammerjs.github.io/)。
+《侏罗纪世界》海报
+《侏罗纪世界》海报
 
-点击超级会员专享，折上95折 banner，卡片向上滑入
+是对未知事物充满好奇，这也是为什么片中的基因公司会去创造混血恐龙，他们想打造出一种比霸王龙更凶悍的物种。”
 
-<video src="http://cloud.video.taobao.com//play/u/263674894/p/1/e/6/t/1/50072164318.mp4" autoplay controls preload loop muted width="300px"></video>
+看点二：特效惊人-3D场景让人如临其境
 
-这里直接使用 `transition` 控制过渡。发生样式变化的有 3 个地方：
+《侏罗纪世界》全片直接采用3D格式拍摄，不同于之前上映的其他后期转制3D格式的影片，为了追求更好的映像质感，导演坚持采用了35mm和65mm胶片进行拍摄，通过实景3D视效画面来为观众提供更加震撼的史前奇幻旅程。
 
-- 卡片位置，使用 `transform: translateY` 控制纵向位置
-- 遮罩透明度，随着卡片上滑，背景遮罩由透明变为半透明
-- 卡片的阴影，注意仔细观察，随着卡片的上滑，为了凸显出弹层是悬浮在底层的视觉效果，其阴影的 `blur`,`spread`,`color` 也跟随变重
+在之前曝光的片花中，翼龙在空中袭击公园游客的场景令人印象深刻。导演坦言，在影片拍摄过程当中，这也是最难掌控的一场戏。“当时拍摄现场有1000多个群众演员，他们在不停地奔跑、喊叫，想要躲避来自翼龙的威胁。这样的场面是非常难以控制和拍摄的，但是我们最终还是克服了困难，完美地呈现了这场戏。”
 
-下面再加入 pan 手势，即拖拽或平移，这里我们使用这个手势实现弹层的拖拽和相关动画。手指不离开屏幕进行滑动操作，如下图：
+看点三：爱情感人-双人对手戏让浪漫升温
 
-<video src="http://cloud.video.taobao.com//play/u/263674894/p/1/e/6/t/1/50072178262.mp4"  controls preload loop muted width="300px"></video>
+作为《侏罗纪公园》系列电影的第四部，《侏罗纪世界》延续了前三部的科幻、动作、惊悚、冒险剧情之外，男女主人公的感情线也是该片的一大亮点。克里斯-帕拉特扮演的欧文是一个动物科学家。布莱斯-达拉斯-霍华德扮演的克莱尔则是一个极赋商业头脑和领导才能的女高管，她和欧文最初是工作伙伴，在共同经历了侏罗纪世界的“夺命危机”之后，两人的感情有了微妙的变化。
 
-我们把最外层容器节点作为参数，实例化 hammer 对象，默认 pan 手势只有横向操作，这里设置为所有方向。在监听 pandown panup 时，根据手指移动的差值控制卡片位置、背景遮罩透明度、卡片阴影的样式。代码如下：
+两人在影片中有多场温馨浪漫的对手戏，克里斯在拍摄后表示：“和布莱斯合作非常开心，我们把对于彼此的感觉融合到表演中，在电影里通过很多细节来表现，非常希望能和大家在电影院里分享。”而女主角布莱斯-达拉斯-霍华德同样对对搭档给予了赞扬：“在电影里，他是一个领袖，是一个英雄。而在生活中，他是体贴的‘暖男’，懂得照顾其他人，同时他也是一个乐观而幽默的人。”
 
-```js
-const hammer = new Hammer(containerEl)
-hammer.get('pan').set({ direction: Hammer.DIRECTION_ALL })
-hammer.on('pandown panup', panDownUp)
+看点四：经典动人-不枉观众22年的等待
 
-const panDownUp = (ev) => {
-  const opacity = 0.7 - ev.deltaY / 1024
-  coverEle.style.opacity = opacity
+1993年，《侏罗纪公园》首部上映，在全球范围内刮起一阵恐龙热潮，2015年，全新的《侏罗纪世界》终于再度开启，为陪伴它走过22载的观众们奉献出一道饕餮盛宴。面对当年看《侏罗纪公园》长大的观众们，这是一场童梦重温；而对于初次走进影院的观众来说，这是一段全新记忆的起点。为了不辜负观众对于这部电影的期待，导演科林-特莱沃若在经典中加入了全新的元素，他说：“我并不希望《侏罗纪世界》只是在简单地重复之前的三部电影。我们都知道，《侏罗纪公园》系列电影中的第一部实际上是在介绍一个概念，而第二部和第三部则主要是在铺陈，真正的故事其实是到了第四部才全面展开。在这部全新的《侏罗纪世界》中，观众不仅能看到熟悉的画面、震撼的场景、逼真的特效，还有情感的交织和人性的升华，这正是《侏罗纪世界》区别于之前三部的最大亮点。”
 
-  const boxShadowBlur = 12 - ev.deltaY / 46
-  const boxShadowSpread = 3 - ev.deltaY / 180
-  const boxShadowColorAlpha = ''
-  popWrapEle.style.boxShadow = `0 0 ${boxShadowBlur}px ${boxShadowSpread}px rgba(0,0,0,${opacity})`
 
-  const scrollY = ev.deltaY * 1.2
-  popWrapEle.style.transform = `translateY(${scrollY}px)`
-}
-```
 
-对于各个样式属性的值，通过乘系数等方式得到需要的值。
-
-这里要注意，pan 的操作中是不需要原有的 transition 过渡的，因为滑动操作时，希望让动画非常跟手，而 transition 是一个消耗时间的过渡，而且多次触发 transition 也会导致性能问题，我们要在 panstart 将其移除，panend 再加回来，添加如下代码：
-
-```js
-hammer.on('panstart', () => {
-  popWrapEle.classList.remove('pop-wrap-transition')
-  coverEle.classList.remove('cover-transition')
-})
-hammer.on('panend', (ev) => {
-  popWrapEle.classList.add('pop-wrap-transition')
-  coverEle.classList.add('cover-transition')
-})
-```
-
-## 向下滑出的处理
-
-用户在向下滑动松手时的距离，如果大于某个值，让卡片滑出，关闭 poplayer，小于某个值，则回弹到原位。
-
-这比较符合用户体验、防止误关闭，同时滑出的关闭方式也给了用户一种流畅感。经过本人多次测试，最终选择的下滑临界值为 180。效果如下图：
-
-<video src="http://cloud.video.taobao.com//play/u/263674894/p/1/e/6/t/1/50072156428.mp4"  controls preload loop muted width="300px"></video>
-
-在 panend 事件中加入这个逻辑判断
-
-```js
-hammer.on('panend', (ev) => {
-  if (ev.deltaY > 180) {
-    closePoplayer()
-  } else {
-    popWrapEle.style.transform = 'translateY(0)'
-    popWrapEle.style.boxShadow = '0 0 12px 3px rgba(0,0,0,.74)'
-    coverEle.style.opacity = '0.7'
-  }
-  // ...
-})
-```
-
-## 向上滑动的溢出感
-
-这个卡片本身是无法再向上滑动的，但是如果用户想继续滑呢？为了让这个弹层增添一些活力，我在这个操作中让卡片微微膨胀，增添亲和力，仿佛用户想滑动它，但是它又存在着一股粘滞力无法大距离的移动，甚至满足了用户心中的小小控制欲。
-
-效果如下：
-
-<video src="http://cloud.video.taobao.com//play/u/263674894/p/1/e/6/t/1/50072160378.mp4"  controls preload loop muted width="300px"></video>
-
-在向上滑动事件中加入如下代码：
-
-```js
-const panDownUp = (ev) => {
-  if (ev.deltaY < 0) {
-    console.log(ev.deltaY)
-    const scrollUpY = ev.deltaY / 80
-    const scaleX = -ev.deltaY / 20000 + 1
-    popWrapEle.style.transform = `scale(${scaleX}) translateY(${scrollUpY}px)`
-    return
-  }
-  // ...
-}
-```
-
-## 其他小坑
-
-webkit 前缀。ios 8 下部分 CSS 3 属性需要添加 `-webkit-` 前缀。参考[flexbox布局的兼容性](http://www.ayqy.net/blog/flexbox%E5%B8%83%E5%B1%80%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7/)。
-
-覆盖 status bar。iOS 11 起，需要在 meta 标签中添加 `viewport-fit=cover`，才能使得 webView 覆盖到顶部的 status bar，meta 标签最终可以写为：
-
-``` html
-<meta name="viewport" content="viewport-fit=cover,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-```
-
-## 总结
-
-交互体验体现在各个细节之中，没有大而全的规则，但整体方向就是让用户在使用软件的时候感到更加的自然畅快。而动画只是交互体验中的一小部分。
-
-我认为前端的本质，就是将最优质的用户体验带给用户，我也在为之不断努力，欢迎交流。
