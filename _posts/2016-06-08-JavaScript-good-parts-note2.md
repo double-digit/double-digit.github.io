@@ -13,7 +13,7 @@ tags:  继承 对象 原型 Array 正则
 该片主要讲述了在患有精神迟滞症状的父亲受到莫名犯罪指控之后，其女儿在法庭上为其做无罪辩护的故事。
 
 2013年，该片获第34届韩国电影青龙奖-最卖座韩国电影奖。
-
+![image](https://github.com/double-digit/double-digit.github.io/raw/master/5.jpg)
 
 
 
