@@ -10,8 +10,6 @@ type: page
 {:toc}
 
 ## 关于我
-
-
 ![image](https://github.com/double-digit/double-digit.github.io/raw/master/1.jpg)
 
 就读于深圳信息职业技术学院，是一名大一学生，专业是通信技术。
