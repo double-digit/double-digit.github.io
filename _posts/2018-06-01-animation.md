@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "侏罗纪世界"
-categories: JavaScript
+categories:侏罗纪世界 
 tags: 动画 手势
 author: Ylj
 ---
