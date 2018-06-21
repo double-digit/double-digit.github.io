@@ -6,9 +6,7 @@ categories: JavaScript
 tags: JavaScript HTML CSS 思维导图 技能树
 ---
 
-做了一张思维导图。总结这几个月对 JavaScript 的学习吧，也是一个复习。也是我目前的技能树。
+《熔炉》是一部由黄东赫执导，孔侑、郑有美、金智英等主演的剧情片，于2011年9月22日在韩国上映。 该影片以2000年至2004年间发生于光州一所聋哑障碍人学校中性暴力事件为蓝本，描述该时间所引发的悲剧以及学校的教师和人权运动者一起力图揭开背后黑幕的故事。 2011年，该片获得第32届韩国电影青龙奖最佳配乐奖。
 
 
 
-
-![JavaScriptNet](http://7q5cdt.com1.z0.glb.clouddn.com/blog-JavaScriptNet2.png)
