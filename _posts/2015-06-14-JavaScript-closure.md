@@ -3,7 +3,7 @@ layout: post
 title:  "唐人街探案"
 date:   2015-06-14 14:06:05
 categories: 喜剧
-tags: JavaScript 闭包 慕课网 ife
+
 ---
 
 * content
