@@ -10,10 +10,10 @@ tags: JavaScript Array 算法 慕课网
 {:toc}
 
 《招魂》是由詹姆斯·温指导，朗·里维斯顿，维拉·法梅加，帕特里克·威尔森等主演的惊悚悬疑电影。
-
+![image](https://github.com/double-digit/double-digit.github.io/raw/master/11.jpg)
 该片讲述了佩龙一家1971年搬进了一栋他们朝思暮想的房子里，房子座落在田园风光的罗德岛上，风景优美。然而一系列惊悚的事情接连发生，家里狗的离奇死亡，半夜孩子们被吓醒呼救。这栋房子变成他们的噩梦，十年后，每个人都变得魂不守舍，最终决定搬离罗德岛。 [1]  
 该片于2013年7月在美国上映。
-![image](https://github.com/double-digit/double-digit.github.io/raw/master/11.jpg)
+
 
 
 
