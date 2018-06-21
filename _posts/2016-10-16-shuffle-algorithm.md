@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "分手合约"
-categories: 分手合约
+categories: 爱情
 tags: 动画 手势
 author: Ylj
 ---
