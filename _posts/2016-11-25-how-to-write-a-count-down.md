@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "看不见的客人"
-categories: JavaScript
+categories: 看不见的客人
 tags:  countdown JavaScript
 author: Ylj
 ---
