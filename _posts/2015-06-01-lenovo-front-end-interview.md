@@ -3,7 +3,7 @@ layout: post
 title:  "致我们终将逝去的青春"
 date:   2015-06-1 14:06:05
 categories: 爱情
-tags: 面试 Lenovo 实习 JavaScript
+
 ---
 
 * content
