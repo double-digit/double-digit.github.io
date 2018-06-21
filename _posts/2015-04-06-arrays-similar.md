@@ -2,7 +2,7 @@
 layout: post
 title:  "招魂"
 date:   2015-04-06 15:14:54
-categories: JavaScript
+categories: 恐怖
 tags: JavaScript Array 算法 慕课网
 ---
 
