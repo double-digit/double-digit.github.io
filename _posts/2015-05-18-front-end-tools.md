@@ -4,7 +4,6 @@ title:  "熊出没·奇幻空间"
 date:   2015-05-18 14:06:05
 categories: Tools
 tags: tools CSS reveal 配色
-excerpt: 记录一些好用的前端工具和框架。
 ---
 
 * content
@@ -12,6 +11,8 @@ excerpt: 记录一些好用的前端工具和框架。
 
 《熊出没·奇幻空间》是由丁亮执导，曾舜晞、尚雯婕等主演的一部励志类型的电影。该片于2017年1月28日在中国上映。
 影片讲述了熊大、熊二和光头强与金鹿角守护者，鹿族女孩协力保护金鹿角，击垮反派，最终让森林复苏的故事。
+
+
 ![image](https://github.com/double-digit/double-digit.github.io/raw/master/18.jpg)
 ---
 
