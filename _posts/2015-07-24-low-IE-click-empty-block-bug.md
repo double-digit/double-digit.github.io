@@ -16,7 +16,7 @@ tags: IE CSS 兼容性 HTML
 影片改编自作家辛夷坞的同名小说，讲述了一群青春少年从大学校园的追爱之旅到步入社会的迷雾和抉择的故事。
 
 该片于2013年4月26日在中国内地上映，影片先后获得第33届金像奖最佳两岸华语电影、第29届金鸡奖最佳导演处女作、第32届百花奖最佳导演等奖项 [1]  。
-![image](https://github.com/double-digit/double-digit.github.io/raw/master/9.jpg)
+![image](https://github.com/double-digit/double-digit.github.io/raw/master/10.jpg)
 
 
 
