@@ -3,7 +3,7 @@ layout: post
 title:  "捉妖记2"
 date:   2015-06-12 14:06:05
 categories: 喜剧
-tags: JavaScript 慕课网 this ife
+
 ---
 
 * content
