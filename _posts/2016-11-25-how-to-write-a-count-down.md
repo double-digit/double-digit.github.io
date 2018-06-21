@@ -2,7 +2,6 @@
 layout: post
 title:  "看不见的客人"
 categories: 悬疑
-tags:  countdown JavaScript
 author: Ylj
 ---
 
