@@ -2,8 +2,6 @@
 layout: post
 title:  "亲切的金子"
 date:   2015-03-26 15:14:54
-categories: Sublime
-tags: Sublime jshint csslint
 ---
 
 * content
