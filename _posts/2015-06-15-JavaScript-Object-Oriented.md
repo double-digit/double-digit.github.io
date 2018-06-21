@@ -2,7 +2,7 @@
 layout: post
 title:  "战狼Ⅱ"
 date:   2015-06-15 14:06:05
-categories: JavaScript
+categories: 军事
 tags: JavaScript 面向对象 慕课网 ife
 ---
 
