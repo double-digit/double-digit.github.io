@@ -3,7 +3,7 @@ layout: post
 title:  "熊出没·奇幻空间"
 date:   2015-05-18 14:06:05
 categories: 动画
-tags: tools CSS reveal 配色
+
 ---
 
 * content
