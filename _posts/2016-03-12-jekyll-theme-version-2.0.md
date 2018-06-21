@@ -2,7 +2,7 @@
 layout: post
 title:  "熔炉"
 date:   2016-03-12 11:40:18 +0800
-categories: jekyll
+categories: 剧情
 tags: jekyll 端口 markdown Foxit RubyGems HTML CSS
 author: Haoyang Gao
 ---
