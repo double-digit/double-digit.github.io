@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "七号房的礼物"
-categories: JavaScript
+categories: 喜剧
 tags:  继承 对象 原型 Array 正则
 ---
 
